@@ -6,7 +6,7 @@ import { GET_ALL_USERS } from "./queries/user";
 const RootQuery = new GraphQLObjectType({
   name: "RootQuery",
   fields: {
-    getAllUsers: GET_ALL_USERS
+    getAllUsers: GET_ALL_USERS,
   },
 });
 
