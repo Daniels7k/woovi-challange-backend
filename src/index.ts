@@ -1,8 +1,10 @@
 import "dotenv/config"
 import express from "express";
 import cors from "cors";
-import { graphqlHTTP } from "express-graphql";
 import mongoose from "mongoose";
+
+import { graphqlHTTP } from "express-graphql";
+import { schema } from "./schema";
 
 
 const main = async () => {
@@ -20,10 +22,10 @@ const main = async () => {
     console.log("Mongo Connected")
   })
 
-  // app.use("/graphql", graphqlHTTP({
-  //     schema,
-  //     graphiql: true
-  // }))
+  app.use("/graphql", graphqlHTTP({
+      schema,
+      graphiql: true
+  }))
 
   const PORT = process.env.PORT || 4000;
 
