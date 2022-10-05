@@ -1,13 +1,20 @@
 import { GraphQLObjectType, GraphQLSchema } from "graphql";
 
+import { CREATE_USER } from "./mutations/user";
+import { GET_ALL_USERS } from "./queries/user";
+
 const RootQuery = new GraphQLObjectType({
   name: "RootQuery",
-  fields: {},
+  fields: {
+    getAllUsers: GET_ALL_USERS
+  },
 });
 
 const Mutation = new GraphQLObjectType({
   name: "Mutation",
-  fields: {},
+  fields: {
+    createUser: CREATE_USER,
+  },
 });
 
 export const schema = new GraphQLSchema({
