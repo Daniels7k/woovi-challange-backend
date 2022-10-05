@@ -22,6 +22,13 @@
     "express-graphql": "^0.12.0",
     "graphql": "^15.8.0",
     "mongoose": "^6.6.4",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.8.2",
+    "typescript": "^4.8.4"
   }
 }
