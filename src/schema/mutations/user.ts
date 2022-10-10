@@ -1,5 +1,5 @@
 import { GraphQLString } from "graphql";
-import { UserType } from "../typeDefs/User";
+import { UserType } from "../typeDefs/user";
 
 import User from "../../models/User";
 
