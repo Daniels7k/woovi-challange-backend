@@ -12,7 +12,7 @@ const main = async () => {
   app.use(cors());
   app.use(express.json());
 
-  mongoose.connect(`${process.env.MONGO_URI}`, (error) => {
+  mongoose.connect(`${process.env.MONGO_URI}`, error => {
     if (error) {
       console.log(error);
       return;
@@ -26,7 +26,7 @@ const main = async () => {
     graphqlHTTP({
       schema,
       graphiql: true,
-    })
+    }),
   );
 
   const PORT = process.env.PORT || 4000;
@@ -36,6 +36,6 @@ const main = async () => {
   });
 };
 
-main().catch((error) => {
+main().catch(error => {
   console.log(error);
 });
