@@ -10,7 +10,7 @@ export const DespesaType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLID },
     name: { type: GraphQLString },
-    createdAt: { type: GraphQLString },
+    releaseDate: { type: GraphQLString },
     category: { type: GraphQLString },
     value: { type: GraphQLInt },
   }),

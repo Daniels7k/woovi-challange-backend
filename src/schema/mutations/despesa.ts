@@ -7,7 +7,7 @@ export const CREATE_DESPESA = {
   type: DespesaType,
   args: {
     name: { type: GraphQLString },
-    createdAt: { type: GraphQLString },
+    releaseDate: { type: GraphQLString },
     category: { type: GraphQLString },
     value: { type: GraphQLFloat },
   },
@@ -24,7 +24,7 @@ export const UPDATE_DESPESA = {
   args: {
     id: { type: GraphQLID },
     name: { type: GraphQLString },
-    createdAt: { type: GraphQLString },
+    releaseDate: { type: GraphQLString },
     category: { type: GraphQLString },
     value: { type: GraphQLInt },
   },
