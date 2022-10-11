@@ -5,14 +5,11 @@ import {
   UPDATE_DESPESA,
 } from "./mutations/despesa";
 
-import { CREATE_USER } from "./mutations/user";
 import { DESPESAS } from "./queries/despesa";
-import { GET_ALL_USERS } from "./queries/user";
 
 const RootQuery = new GraphQLObjectType({
   name: "RootQuery",
   fields: {
-    getAllUsers: GET_ALL_USERS,
     despesas: DESPESAS,
   },
 });
@@ -20,7 +17,6 @@ const RootQuery = new GraphQLObjectType({
 const Mutation = new GraphQLObjectType({
   name: "Mutation",
   fields: {
-    createUser: CREATE_USER,
     createDespesa: CREATE_DESPESA,
     updateDespesa: UPDATE_DESPESA,
     deleteDespesa: DELETE_DESPESA,
