@@ -38,7 +38,7 @@ export const UPDATE_DESPESA = {
 export const DELETE_DESPESA = {
   type: DespesaType,
   args: {
-    id: { type: GraphQLInt },
+    id: { type: GraphQLID },
   },
   async resolve(parent: any, args: any) {
     await Despesa.findByIdAndDelete(args.id);
