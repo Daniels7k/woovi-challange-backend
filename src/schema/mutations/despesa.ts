@@ -29,7 +29,22 @@ export const UPDATE_DESPESA = {
     value: { type: GraphQLInt },
   },
   async resolve(parent: any, args: any) {
-    await Despesa.findByIdAndUpdate(args);
+    await Despesa.findByIdAndUpdate(
+      args.id,
+      {
+        name: args.name,
+        releaseDate: args.releaseDate,
+        category: args.category,
+        value: args.value,
+      },
+      (error, docs) => {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log("updated despesa :", docs);
+        }
+      },
+    );
 
     return args;
   },
